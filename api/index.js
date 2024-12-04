@@ -57,10 +57,6 @@ const startApolloServer = async (app, httpServer) => {
 
   await server.start();
   server.applyMiddleware({ app });
-
-  httpServer.listen(4000, () => {
-    console.log('Server is running on http://localhost:4000/graphql');
-  });
 };
 
 startApolloServer(app, httpServer);
